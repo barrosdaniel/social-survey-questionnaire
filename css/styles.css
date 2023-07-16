@@ -1,7 +1,25 @@
+/* Color Variables */
+:root {
+    --primary-color: #6E45A3;
+    --black: #111;
+    --white: #eee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-image: linear-gradient(#111, #6E45A3);
+    margin: 0;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* To be changed once/if the form is longer than the screen length.*/
+    height: 100vh;
 }
 
 h1 {
-    color: red;
+    margin: 0 auto;
+    color: var(--white);
+    text-align: center;
 }
