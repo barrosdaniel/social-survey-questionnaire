@@ -26,10 +26,22 @@
             </div>
             <div class="form-field-group">
                 <label class="form-field-label" for="name">Student
-                    Name</label><br>
+                    Name <span class="label-sub"> (max 50 characters)</span></label><br>
                 <input class="input-field input-field-2col" type="text"
                        id="name" name="name" placeholder="Enter your name"
-                       maxlength="120" required>
+                       maxlength="50" required>
+            </div>
+            <div class="form-field-group">
+                <label class="form-field-label" for="email">Email Address
+                    </label><br>
+                <input class="input-field input-field-2col" type="email"
+                       id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-field-group">
+                <label class="form-field-label" for="phone">Phone number
+                    <span class="label-sub"> (XXXX XXX XXX)</span></label><br>
+                <input class="input-field input-field-2col" type="phone"
+                       id="phone" name="phone" pattern="[0-9]{4} [0-9]{4} [0-9]{3}" placeholder="Enter your phone number">
             </div>
 
 
