@@ -126,3 +126,52 @@ h3 {
     margin-right: 12px;
     font-size: 16px;
 }
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .container {
+        max-width: 94%;
+        margin: 20px auto;
+        padding: 30px;
+    }
+    
+    .input-field-4col {
+        width: 50%;
+    }
+
+    .input-field-2col {
+        width: 100%;
+    }
+
+    .button-link {
+        margin: 40px auto 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        padding-bottom: 0;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .container {
+        margin-bottom: 0;
+        max-width: 100%;
+        border-radius: 0;
+        padding: 16px;
+    }
+    
+    .input-field-4col {
+        width: 100%;
+    }
+
+    .button-link {
+        margin: 20px auto 10px;
+    }
+}
