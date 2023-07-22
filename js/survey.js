@@ -24,7 +24,7 @@ function submitResponsesButtonClick() {
     // Email Address
     const phoneNumberField = document.getElementById("phone");
     const phoneNumberValue = phoneNumberField.value;
-    documentString += "Email Address: " + phoneNumberValue + "<br>";
+    documentString += "Phone Number: " + phoneNumberValue + "<br>";
 
     // Q1 radio buttons
     const q1Field = document.getElementsByName("q1");
@@ -127,8 +127,50 @@ function submitResponsesButtonClick() {
     const q12Value = q12Field.value;
     documentString += "12. If you chose Other in the previous question, please provide description/s. " + q12Value + "<br>";
 
+    // Q13 radio buttons
+    const q13Field = document.getElementsByName("q13");
+    let q13Value = "";
+    for (let value of q13Field) {
+        if (value.checked) {
+            q13Value = value.value;
+        }
+    }
+    documentString += "13. Do you have any ethical concerns, such as enabling plagiarism or cheating, in using AI tools to enhance your learning process or productivity in Computer Science coursework? " + q13Value + "<br>";
+    
+    // Q14 radio buttons
+    const q14Field = document.getElementsByName("q14");
+    let q14Value = "";
+    for (let value of q14Field) {
+        if (value.checked) {
+            q14Value = value.value;
+        }
+    }
+    documentString += "14. Do you have any education quality concerns, such as reduced content learning, in using AI tools to enhance your learning process or productivity in Computer Science coursework? " + q14Value + "<br>";
+    
+    // Q15 radio buttons
+    const q15Field = document.getElementsByName("q15");
+    let q15Value = "";
+    for (let value of q15Field) {
+        if (value.checked) {
+            q15Value = value.value;
+        }
+    }
+    documentString += "15. Do you think AI tools have the potential to replace human instructors or mentors in the Computer Science learning process? " + q15Value + "<br>";
 
+    // Q16 radio buttons
+    const q16Field = document.getElementsByName("q16");
+    let q16Value = "";
+    for (let value of q16Field) {
+        if (value.checked) {
+            q16Value = value.value;
+        }
+    }
+    documentString += "16. Do you think AI tools will play a significant role in the future integration of AI in the field of Computer Science education? " + q16Value + "<br>";
 
+    // Q17 textarea
+    const q17Field = document.getElementById("q17");
+    const q17Value = q17Field.value;
+    documentString += "17. Provide any further comments relating to your learning process or productivity in Computer Science coursework? " + q17Value + "<br>";
 
     documentString += "<\p>";
 
