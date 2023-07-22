@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>CQU | AI in CS Education Survey</title>
 </head>
 
@@ -13,8 +13,13 @@
     </h1>
     <div class="container" id="container">
         <h2 class="content-title" id="contentTitle">Survey Questionnaire</h2>
-        <form id="form">
-            <h3>Demographics</h3>
+        <form id="form" name="form" onsubmit="submitResponsesButtonClick()"
+              method="post">
+
+
+
+            <!-- Demographics section -->
+            <h3 class="form-section-title">Demographics</h3>
             <div class="form-field-group">
                 <label class="form-field-label" for="studentID">Student
                     ID<span class="label-sub"> (8 numeric
@@ -26,35 +31,97 @@
             </div>
             <div class="form-field-group">
                 <label class="form-field-label" for="name">Student
-                    Name <span class="label-sub"> (max 50 characters)</span></label><br>
+                    Name <span class="label-sub"> (max 50
+                        characters)</span></label><br>
                 <input class="input-field input-field-2col" type="text"
                        id="name" name="name" placeholder="Enter your name"
                        maxlength="50" required>
             </div>
             <div class="form-field-group">
                 <label class="form-field-label" for="email">Email Address
-                    </label><br>
+                </label><br>
                 <input class="input-field input-field-2col" type="email"
-                       id="email" name="email" placeholder="Enter your email address" required>
+                       id="email" name="email"
+                       placeholder="Enter your email address" required>
             </div>
             <div class="form-field-group">
-                <label class="form-field-label" for="phone">Phone number
+                <label class="form-field-label" for="phone">Phone Number
                     <span class="label-sub"> (XXXX XXX XXX)</span></label><br>
                 <input class="input-field input-field-2col" type="phone"
-                       id="phone" name="phone" pattern="[0-9]{4} [0-9]{4} [0-9]{3}" placeholder="Enter your phone number">
+                       id="phone" name="phone" pattern="[0-9]{10}"
+                       placeholder="Enter your phone number">
             </div>
 
 
 
-
+            <!-- Survey questions section -->
+            <h3 class="form-section-title">Questionnaire</h3>
+            <!-- Q1 radio buttons-->
             <div class="form-field-group">
-                <button class="button-link" id="submit-button">Submit
+                <p class="form-field-question">1. Have you used
+                    AI-powered tools to enhance your learning process or
+                    productivity in Computer Science coursework?
+                </p><br>
+                <label class="label-radio" for="Yes">
+                    <input type="radio" id="Yes" name="q1" value="Yes">
+                    Yes</input>
+                </label>
+                <label for="No">
+                    <input type="radio" id="No" name="q1" value="No"> No</input>
+                </label>
+            </div>
+            <!-- Q2 checkboxes-->
+            <div class="form-field-group">
+                <p class="form-field-question">2. Which AI tools have you found
+                    most useful for enhancing your learning process or
+                    productivity in Computer Science coursework?
+                </p><br>
+                <label class="label-checkbox" for="highlighting">
+                    <input type="checkbox" id="highlighting" name="q2"
+                           value="Highlighting">
+                    &nbsp;IDE syntax error highlighting</input><br>
+                </label>
+                <label class="label-checkbox" for="codeCompletion">
+                    <input type="checkbox" id="codeCompletion" name="q2"
+                           value="Code Completion">
+                    &nbsp;IDE code completion</input><br>
+                </label>
+                <label class="label-checkbox" for="debugger">
+                    <input type="checkbox" id="debugger" name="q2"
+                           value="Debugger">
+                    &nbsp;IDE debugger</input><br>
+                </label>
+                <label class="label-checkbox" for="githubCopilot">
+                    <input type="checkbox" id="githubCopilot" name="q2"
+                           value="Github Copilot">
+                    &nbsp;Github Copilot</input><br>
+                </label>
+                <label class="label-checkbox" for="llm">
+                    <input type="checkbox" id="llm" name="q2"
+                           value="Large Language Models">
+                    &nbsp;Large Language Models (LLMs) (E.g. ChatGPT, Google
+                    BARD, New Bing)</input><br>
+                </label>
+                <label class="label-checkbox" for="other">
+                    <input type="checkbox" id="other" name="q2" value="Other">
+                    &nbsp;Other</input><br>
+                </label>
+            </div>
+            <!-- Q3 -->
+
+
+
+
+            <!-- Submit button -->
+            <div class="form-field-group">
+                <button type="submit" class="button-link" id="submit-button"
+                        value="submit">Submit
                     responses</button>
             </div>
         </form>
     </div>
-    <script src="/js/AdjustHeight.js"></script>
-    <script src="/js/survey.js"></script>
+    <script src="js/AdjustHeight.js"></script>
+    <script src="js/survey.js"></script>
 </body>
 
 </html>
