@@ -117,6 +117,10 @@ h3 {
     width: 50%;
 }
 
+.input-field-1col {
+    width: 100%;
+}
+
 .label-radio {
     display: inline-block;
     margin-right: 12px;
