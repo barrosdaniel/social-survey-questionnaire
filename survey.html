@@ -46,7 +46,8 @@
             </div>
             <div class="form-field-group">
                 <label class="form-field-label" for="phone">Phone Number
-                    <span class="label-sub"> (XXXX XXX XXX)</span></label><br>
+                    <span class="label-sub"> (10 numeric
+                        digits)</span></label><br>
                 <input class="input-field input-field-2col" type="phone"
                        id="phone" name="phone" pattern="[0-9]{10}"
                        placeholder="Enter your phone number">
@@ -141,25 +142,19 @@
                 </label>
             </div>
 
-            <!-- Q5 radio buttons-->
+            <!-- Q5 selection box -->
             <div class="form-field-group">
                 <p class="form-field-question">5. How have AI tools impacted
                     your ability to collaborate and engage in peer learning
                     experiences within the context of Computer Science studies?
                 </p><br>
-                <label class="label-radio" for="increased">
-                    <input type="radio" id="increased" name="q5"
-                           value="Increased"> Increased</input>
-                </label>
-                <label class="label-radio" for="decreased">
-                    <input type="radio" id="decreased" name="q5"
-                           value="Decreased"> Decreased</input>
-                </label>
-                <label class="label-radio" for="didNotChange">
-                    <input type="radio" id="didNotChange" name="q5"
-                           value="Did not change"> Did not change</input>
-                </label>
-
+                <select class="input-field input-field-4col" name="q5" id="q5">
+                    <option value="">---------- Select -----------
+                    </option>
+                    <option value="Increased">Increased</option>
+                    <option value="Decreased">Decreased</option>
+                    <option value="Did not change">Did not change</option>
+                </select>
             </div>
 
             <!-- Q6 Textarea -->
@@ -168,8 +163,8 @@
                     AI tools impacted your ability to collaborate and engage in
                     peer learning experiences within the context of Computer
                     Science studies. </p><br>
-                <textarea class="input-field input-field-1col" id="q6"
-                          name="details" rows="4"
+                <textarea class="input-field input-field-1col" id="q6Details"
+                          name="q6Details" rows="4"
                           placeholder="Details..."></textarea>
             </div>
 
@@ -187,6 +182,100 @@
                     <input type="radio" id="q7No" name="q7" value="No">
                     No</input>
                 </label>
+            </div>
+
+            <!-- Q8 Textarea -->
+            <div class="form-field-group">
+                <p class="form-field-question">8. Please provide details of any
+                    limitations or drawbacks you experienced when using AI
+                    tools for enhancing your learning process or productivity in
+                    Computer Science coursework?</p><br>
+                <textarea class="input-field input-field-1col" id="q8Details"
+                          name="q8Details" rows="4"
+                          placeholder="Details..."></textarea>
+            </div>
+
+            <!-- Q9 radio buttons-->
+            <div class="form-field-group">
+                <p class="form-field-question">9. Do you think AI tools can
+                    contribute to bridging the gap between theoretical Computer
+                    Science concepts and real-world applications? </p><br>
+                <label class="label-radio" for="q9Yes">
+                    <input type="radio" id="q9Yes" name="q9" value="Yes">
+                    Yes</input>
+                </label>
+                <label class="label-radio" for="q9No">
+                    <input type="radio" id="q9No" name="q9" value="No">
+                    No</input>
+                </label>
+            </div>
+
+            <!-- Q10 radio buttons-->
+            <div class="form-field-group">
+                <p class="form-field-question">10. Have you used AI-powered LLM
+                    tools, such as ChatGPT, Google BARD, or New Bing, to enhance
+                    your learning process or productivity in Computer Science
+                    coursework?</p><br>
+                <label class="label-radio" for="q10Yes">
+                    <input type="radio" id="q10Yes" name="q10" value="Yes">
+                    Yes</input>
+                </label>
+                <label class="label-radio" for="q10No">
+                    <input type="radio" id="q10No" name="q10" value="No">
+                    No</input>
+                </label>
+            </div>
+
+            <!-- Q11 checkboxes-->
+            <div class="form-field-group">
+                <p class="form-field-question">11. If yes, what were the main
+                    tasks you used LLM tools, such as ChatGPT, Google BARD, or
+                    New Bing, to complete?
+                </p><br>
+                <label class="label-checkbox" for="documentation">
+                    <input type="checkbox" id="documentation" name="q11"
+                           value="Documentation">
+                    &nbsp;Understand documentation</input><br>
+                </label>
+                <label class="label-checkbox" for="codeExamples">
+                    <input type="checkbox" id="codeExamples" name="q11"
+                           value="Code Examples">
+                    &nbsp;Generate code examples</input><br>
+                </label>
+                <label class="label-checkbox" for="troubleshoot">
+                    <input type="checkbox" id="troubleshoot" name="q11"
+                           value="Troubleshoot">
+                    &nbsp;Troubleshoot and fix buggy code</input><br>
+                </label>
+                <label class="label-checkbox" for="refactor">
+                    <input type="checkbox" id="refactor" name="q11"
+                           value="Refactor">
+                    &nbsp;Refactor working code</input><br>
+                </label>
+                <label class="label-checkbox" for="designAlgorithms">
+                    <input type="checkbox" id="designAlgorithms" name="q11"
+                           value="Design Algorithms">
+                    &nbsp;Design algorithm steps for me to follow</input><br>
+                </label>
+                <label class="label-checkbox" for="translateCode">
+                    <input type="checkbox" id="translateCode" name="q11"
+                           value="Translate Code">
+                    &nbsp;Translate code to another programming
+                    language</input><br>
+                </label>
+                <label class="label-checkbox" for="other">
+                    <input type="checkbox" id="other" name="q11" value="Other">
+                    &nbsp;Other</input><br>
+                </label>
+            </div>
+
+            <!-- Q12 Textarea -->
+            <div class="form-field-group">
+                <p class="form-field-question">12. If you chose Other in the
+                    previous question, please provide description/s.</p><br>
+                <textarea class="input-field input-field-1col" id="q12Details"
+                          name="q12Details" rows="4"
+                          placeholder="Details..."></textarea>
             </div>
 
 

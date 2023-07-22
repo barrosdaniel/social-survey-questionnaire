@@ -66,18 +66,14 @@ function submitResponsesButtonClick() {
     }
     documentString += "4. Have you used any AI-based code analysis or debugging tools? " + q4Value + "<br>";
     
-    // Q5 radio buttons
-    const q5Field = document.getElementsByName("q5");
-    let q5Value = "";
-    for (let value of q5Field) {
-        if (value.checked) {
-            q5Value = value.value;
-        }
-    }
+    // Q5 selection box
+    const q5Field = document.getElementsByName("q5")[0];
+    let q5Value = q5Field.value;
     documentString += "5. How have AI tools impacted your ability to collaborate and engage in peer learning experiences within the context of Computer Science studies? " + q5Value + "<br>";
 
+
     // Q6 textarea
-    const q6Field = document.getElementById("q6");
+    const q6Field = document.getElementById("q6Details");
     const q6Value = q6Field.value;
     documentString += "6. Please provide details of how AI tools impacted your ability to collaborate and engage in peer learning experiences within the context of Computer Science studies. " + q6Value + "<br>";
 
@@ -91,6 +87,45 @@ function submitResponsesButtonClick() {
     }
     documentString += "7. Have you experienced any limitations or drawbacks when using AI for enhancing your learning process or productivity in Computer Science coursework? " + q7Value + "<br>";
 
+    // Q8 textarea
+    const q8Field = document.getElementById("q8Details");
+    const q8Value = q8Field.value;
+    documentString += "8. Please provide details of any limitations or drawbacks you experienced when using AI tools for enhancing your learning process or productivity in Computer Science coursework? " + q8Value + "<br>";
+
+    // Q9 radio buttons
+    const q9Field = document.getElementsByName("q9");
+    let q9Value = "";
+    for (let value of q9Field) {
+        if (value.checked) {
+            q9Value = value.value;
+        }
+    }
+    documentString += "9. Do you think AI tools can contribute to bridging the gap between theoretical Computer Science concepts and real-world applications? " + q9Value + "<br>";
+
+    // Q10 radio buttons
+    const q10Field = document.getElementsByName("q10");
+    let q10Value = "";
+    for (let value of q10Field) {
+        if (value.checked) {
+            q10Value = value.value;
+        }
+    }
+    documentString += "10. Have you used AI-powered LLM tools, such as ChatGPT, Google BARD, or New Bing, to enhance your learning process or productivity in Computer Science coursework? " + q10Value + "<br>";
+
+    // Q11 checkboxes
+    const q11Field = document.getElementsByName("q11");
+    let q11Value = [];
+    for (let value of q11Field) {
+        if (value.checked) {
+            q11Value.push(value.value);
+        }
+    }
+    documentString += "11. If yes, what were the main tasks you used LLM tools, such as ChatGPT, Google BARD, or New Bing, to complete? " + q11Value.toString() + "<br>";   
+    
+    // Q12 textarea
+    const q12Field = document.getElementById("q12Details");
+    const q12Value = q12Field.value;
+    documentString += "12. If you chose Other in the previous question, please provide description/s. " + q12Value + "<br>";
 
 
 
